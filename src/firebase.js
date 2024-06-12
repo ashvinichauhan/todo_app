@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, serverTimestamp } from 'firebase/firestore';
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -13,9 +13,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // Initialize Firestore
-const db = getFirestore(firebaseApp);
+const db = getFirestore(app);
 
-export default db;
+export { db, serverTimestamp };

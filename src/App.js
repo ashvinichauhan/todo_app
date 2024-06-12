@@ -2,8 +2,8 @@ import './App.css';
 import Todo from './Todo';
 import React, { useState, useEffect } from 'react';
 import { Button, FormControl, Input, InputLabel } from '@mui/material';
-import db from './firebase';
-import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from 'firebase/firestore';
+import { db, serverTimestamp } from './firebase';
+import { collection, addDoc, onSnapshot, query, orderBy } from 'firebase/firestore';
 
 function App() {
   const [todos, setTodos] = useState([]);
